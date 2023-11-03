@@ -32,8 +32,11 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT,1440) # alto
 # Tomar una imagen
 ret, frame = cap.read()
 
+
+
+
 # Guardamos la imagen en un archivo
-cv2.imwrite('rostro.jpg',frame)
+cv2.imwrite('C:/Users/aleja/Desktop/rostroPrueba/rostro.jpg',frame)
 
 #{{{{{{{{{{{{{{{{{{}}}}}}}}}}}}}}}}}}
 # Codificar la imagen en base64
@@ -41,8 +44,7 @@ with open("rostro.jpg", "rb") as image_file:
     encoded_image = base64.b64encode(image_file.read()).decode('utf-8')
 
 # Devolver la imagen codificada en base64 a la consola
-sys.stdout.write(encoded_image)
-sys.stdout.flush()
+#sys.stdout.write(encoded_image)
 
 #Liberamos la cámara
 cap.release()
